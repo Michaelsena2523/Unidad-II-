@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tarea II</title>
+</head>
+<body>
+
+  <style>
+
+    ul{
+      font-size: 20px;
+    }
+
+    h3{
+      font-size: 22px;
+    }
+  </style>
+  
+     <main>
+      <h2>1. Principales funciones de un kernel en la arquitectura de un sistema operativo y su interacción con el hardware</h2>
+       <h3>El kernel es el núcleo del sistema operativo y desempeña varias funciones esenciales, entre ellas:</h3><br>
+       <h3><b>Gestión de Procesos:</b></h3>
+        <ul>
+          <li><b>Planificación:</b> Decide qué procesos se ejecutan y en qué orden. Usa algoritmos de planificación para optimizar el rendimiento del sistema.</li>
+          <li><b>Creación y Terminación:</b> Inicia y finaliza procesos, gestionando sus recursos y estados.</li>
+        </ul>
+        <h3>Gestión de Memoria:</h3>
+        <ul>
+          <li><b>Asignación y Liberación:</b>Asigna memoria a los procesos y la libera cuando ya no es necesaria.</li>
+          <li><b>Paginación y Segmentación:</b> Implementa técnicas de administración de memoria para usar eficientemente la RAM y proporcionar protección de memoria.</li>
+        </ul>
+        <h3>Gestión de Dispositivos:</h3>
+        <ul>
+          <li><b>Controladores de Dispositivos: </b>Proporciona interfaces para que el software interactúe con el hardware.</li>
+          <li><b>Comunicación: </b>Facilita la comunicación entre el software y los dispositivos de hardware mediante controladores</li>
+        </ul>
+        <h3>Gestión de Archivos:</h3>
+        <ul>
+          <li><b>Sistemas de Archivos: </b>Proporciona estructuras y métodos para almacenar, organizar y acceder a los datos en dispositivos de almacenamiento.</li>
+        </ul>
+         <h3>Seguridad y Control de Acceso:</h3>
+         <ul>
+          <li><b>Autenticación y Autorización:</b> Verifica la identidad de los usuarios y controla el acceso a los recursos del sistema.</li>
+          <li><b>Aislamiento:</b> Aísla los procesos para evitar que interfieran entre sí, protegiendo la estabilidad y seguridad del sistema.</li>
+         </ul>
+         <h3>Interacción con el Hardware:</h3>
+         <ul>
+          <li>El kernel actúa como intermediario entre el software y el hardware. Usa controladores específicos para cada dispositivo de hardware, permitiendo que el software ejecute comandos y reciba datos de los dispositivos físicos.</li>
+         </ul><br>
+
+         <h2>2. Gestión de procesos y la importancia de la multitarea en la eficiencia del sistema</h2><br>
+           
+         <h3>Gestión de Procesos:</h3>
+         <ul>
+          <li><b>Estados del Proceso: </b>Los procesos pueden estar en varios estados (ejecución, espera, listo, etc.). El kernel gestiona estos estados y las transiciones entre ellos.</li>
+          <li><b>Planificación:</b> Determina el orden y la duración de la ejecución de los procesos. Los algoritmos de planificación pueden ser por prioridad, round-robin, FIFO, entre otros.</li>
+          <li><b>Sincronización:</b> Coordina la ejecución de los procesos para evitar conflictos, como condiciones de carrera.</li>
+          <li><b>Comunicación entre Procesos (IPC):</b> Proporciona mecanismos para que los procesos se comuniquen y se sincronicen entre sí, como semáforos, colas de mensajes y memoria compartida.</li>
+         </ul>
+         <h3>Importancia de la Multitarea:</h3>
+         <ul>
+          <li><b>Eficiencia: </b>La multitarea permite que múltiples procesos se ejecuten "simultáneamente" (en realidad, el CPU cambia rápidamente entre procesos). Esto maximiza el uso del CPU y otros recursos del sistema</li>
+          <li><b>Respuesta Rápida: </b>Mejora la capacidad del sistema para responder rápidamente a eventos, ya que siempre hay procesos listos para ejecutarse.</li>
+          <li><b>Productividad:</b> Permite que los usuarios ejecuten múltiples aplicaciones al mismo tiempo, mejorando la productividad.</li>
+          <li><b>Aislamiento:</b> Los procesos se ejecutan en sus propios espacios de memoria, lo que mejora la estabilidad y la seguridad del sistema.</li>
+         </ul>
+     
+         <h2>3. Medidas de seguridad a nivel de sistema operativo para proteger una red en entornos empresariales</h2>
+         <h3>Autenticación Fuerte:</h3>
+         <ul>
+          <li><b>Contraseñas Seguras:</b> Implementar políticas de contraseñas robustas y obligatorias.</li>
+          <li><b>Autenticación Multifactor (MFA):</b> Requerir múltiples formas de verificación antes de permitir el acceso.</li>
+         </ul>
+         <h3>Control de Acceso:</h3>
+         <ul><b>Roles y Permisos:</b> Usar un modelo basado en roles (RBAC) para limitar el acceso a los recursos según la función del usuario.</ul>
+         <ul><b>Listas de Control de Acceso (ACL):</b>Definir y aplicar listas que controlen quién puede acceder a qué recursos.</ul>
+         <h3>Cifrado:</h3>
+          <ul>
+            <li><b>Datos en Tránsito:</b> Usar protocolos seguros como TLS/SSL para proteger los datos transmitidos por la red.</li>
+            <li><b>Datos en Reposo:</b> Cifrar datos almacenados para protegerlos en caso de acceso no autorizado.</li>
+          </ul>
+          <h3>Firewall y Filtrado de Paquetes:</h3>
+         <ul>
+          <li><b>Firewalls:</b>Implementar firewalls para filtrar tráfico no autorizado y potencialmente dañino.</li>
+          <li><b>Sistema de Detección/Prevención de Intrusiones (IDS/IPS): </b>Monitorear y bloquear actividades sospechosas en la red.</li>
+         </ul>
+         <h3>Actualizaciones y Parches:</h3>
+         <ul>
+          <li><b>Actualización Regular:</b> Mantener el sistema operativo y las aplicaciones actualizadas para proteger contra vulnerabilidades conocidas.</li>
+          <li><b>Gestión de Parches: </b>Implementar un proceso de gestión de parches para asegurar que todas las actualizaciones se apliquen de manera oportuna.</li>
+         </ul>
+         <h3>Seguridad del Punto Final:</h3>
+         <ul>
+          <li><b>Antivirus y Antimalware:</b> Usar software de seguridad para detectar y eliminar amenazas.</li>
+          <li><b>Control de Dispositivos:</b>Limitar el uso de dispositivos externos como USB para prevenir la introducción de malware</li>
+         </ul>
+         <h3>Monitoreo y Auditoría:</h3>
+         <ul>
+          <li><b>Registro de Actividades:</b> Mantener registros detallados de todas las actividades del sistema y la red.</li>
+          <li><b>Auditorías de Seguridad:</b> Realizar auditorías regulares para identificar y corregir vulnerabilidades.</li>
+         </ul>
+         <h3>Educación y Conciencia:</h3>
+         <ul>
+          <li><b>Capacitación: </b>Educar a los empleados sobre las mejores prácticas de seguridad y la importancia de seguir las políticas de seguridad.</li>
+         </ul>
+         <br>
+         <br>
+         <h2>Fin</h2>
+         
+
+
+
+     </main>
+
+
+
+</body>
+</html>
